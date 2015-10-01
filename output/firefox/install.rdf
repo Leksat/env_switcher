@@ -15,8 +15,8 @@
         <em:creator>Kango</em:creator>
         <em:homepageURL>http://kangoextensions.com/</em:homepageURL>
         <em:iconURL>chrome://kango-a714fc55-e17e-4b0b-890a-7d6c4e35921d/content/icons/icon32.png</em:iconURL>
-        
-        
+        <em:optionsURL>chrome://kango-a714fc55-e17e-4b0b-890a-7d6c4e35921d/content/options.html</em:optionsURL>
+        <em:optionsType>3</em:optionsType>
         
         <em:type>2</em:type>
     </Description>

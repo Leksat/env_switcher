@@ -5,10 +5,12 @@
     "framework_version": "1.7.9 e39b6ff2fcc8", 
     "package_id": "kango-a714fc55-e17e-4b0b-890a-7d6c4e35921d", 
     "background_scripts": [
+        "common.js", 
         "main.js"
     ], 
     "homepage_url": "http://kangoextensions.com/", 
     "version": "0.9.0", 
+    "options_page": "options.html", 
     "framework_package_id": "dev", 
     "browser_button": {
         "caption": "Kango", 

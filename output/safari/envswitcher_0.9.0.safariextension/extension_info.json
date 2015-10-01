@@ -5,10 +5,12 @@
     "framework_version": "1.7.9 e39b6ff2fcc8", 
     "developer_id": "YOUR_SAFARI_DEVELOPER_ID", 
     "background_scripts": [
+        "common.js", 
         "main.js"
     ], 
     "homepage_url": "http://kangoextensions.com/", 
     "version": "0.9.0", 
+    "options_page": "options.html", 
     "framework_package_id": "dev", 
     "browser_button": {
         "caption": "Kango", 
