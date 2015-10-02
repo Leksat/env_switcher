@@ -8,18 +8,20 @@ KangoAPI.onReady(function() {
 
     var switcher = document.getElementById('switcher');
     function makeButton(env, url) {
-      var button = document.createElement('button');
-      button.innerHTML = env;
-      if (env === parsed.env) {
-        button.disabled = true;
-      }
-      button.addEventListener('click', function() {
+      var linkElement = document.createElement('a');
+      linkElement.innerHTML = env;
+      linkElement.href = url;
+      var active = (env == parsed.env);
+      linkElement.addEventListener('click', function(e) {
+        if (active || e.metaKey) {
+          return false;
+        }
         tab.navigate(url);
         KangoAPI.closeWindow();
       });
       var div = document.createElement('div');
       switcher.appendChild(div);
-      div.appendChild(button);
+      div.appendChild(linkElement);
     }
 
     link.host = parsed.baseHost;
