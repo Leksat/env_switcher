@@ -24,6 +24,7 @@ KangoAPI.onReady(function() {
       div.appendChild(linkElement);
     }
 
+    link.protocol = 'http:'; // Always use HTTP.
     link.host = parsed.baseHost;
     makeButton('Production', link.href);
     var envDefs = getEnvDefs();
