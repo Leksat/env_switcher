@@ -1,12 +1,12 @@
-function getEnvDefs() {
+function env_switcher_getEnvDefs() {
   var envDefs = kango.storage.getItem('env_defs');
-  if (envDefs === null || typeof envDefs !== 'object') {
-    envDefs = {};
+  if (Object.prototype.toString.call(envDefs) !== '[object Array]') {
+    envDefs = [];
   }
   return envDefs;
 }
 
-function parseUrl(url) {
+function env_switcher_parseUrl(url) {
   var link = document.createElement('a');
   link.href = url;
 
@@ -14,22 +14,20 @@ function parseUrl(url) {
     link.host = link.host.substring(4);
   }
 
-  var envDefs = getEnvDefs();
-  var env = 'Production';
+  var envDefs = env_switcher_getEnvDefs();
+  var envName = 'Production';
   var baseHost = link.host;
-  for (var name in envDefs) {
-    if (envDefs.hasOwnProperty(name)) {
-      var suffix = envDefs[name];
-      if (link.host.indexOf(suffix, link.host.length - suffix.length) !== -1) {
-        env = name;
-        baseHost = link.host.substr(0, link.host.length - suffix.length);
-        break;
-      }
+  for (var i = 0; i < envDefs.length; i++) {
+    var envDef = envDefs[i];
+    if (link.host.indexOf(envDef.domainSuffix, link.host.length - envDef.domainSuffix.length) !== -1) {
+      envName = envDef.envName;
+      baseHost = link.host.substr(0, link.host.length - envDef.domainSuffix.length);
+      break;
     }
   }
 
   return {
-    env: env,
+    env: envName,
     baseHost: baseHost
   };
 }

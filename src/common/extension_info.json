@@ -1,17 +1,20 @@
 {
-    "content_scripts": [], 
+    "content_scripts": [
+        "common.js",
+        "content.js"
+    ],
     "description": "Extension description", 
     "creator": "Kango", 
     "background_scripts": [
         "common.js",
         "main.js"
     ],
-    "homepage_url": "http://kangoextensions.com/", 
-    "version": "0.9.0", 
+    "homepage_url": "https://github.com/Leksat/env_switcher",
+    "version": "1.0.0",
     "browser_button": {
-        "caption": "Kango", 
-        "icon": "icons/button.png", 
-        "tooltipText": "Kango"
+        "caption": "Environment Switcher",
+        "icon": "icons/switcher.png",
+        "tooltipText": "Environment Switcher"
     },
     "options_page": "options.html",
     "name": "env_switcher"

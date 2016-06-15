@@ -4,7 +4,7 @@ KangoAPI.onReady(function() {
 
     var link = document.createElement('a');
     link.href = tab.getUrl();
-    var parsed  = parseUrl(link.href);
+    var parsed  = env_switcher_parseUrl(link.href);
 
     var switcher = document.getElementById('switcher');
     function makeButton(env, url) {
@@ -27,13 +27,11 @@ KangoAPI.onReady(function() {
     link.protocol = 'http:'; // Always use HTTP.
     link.host = parsed.baseHost;
     makeButton('Production', link.href);
-    var envDefs = getEnvDefs();
-    for (var env in envDefs) {
-      if (envDefs.hasOwnProperty(env)) {
-        var suffix = envDefs[env];
-        link.host = parsed.baseHost + suffix;
-        makeButton(env, link.href);
-      }
+    var envDefs = env_switcher_getEnvDefs();
+    for (var i = 0; i < envDefs.length; i++) {
+      var envDef = envDefs[i];
+      link.host = parsed.baseHost + envDef.domainSuffix;
+      makeButton(envDef.envName, link.href);
     }
 
     switcher.focus();
