@@ -2,6 +2,8 @@
 
 A browser extension for website developers allowing for quick-switch website domains.
 
+Source code: https://github.com/Leksat/env_switcher
+
 ## How it works
 
 If your development environments are based on the domain suffixes, this extension will help you to quick-switch environmets preserving the URL path. It also can prefix browser tabs to distinguish environments.
@@ -26,3 +28,7 @@ The format of a configuration line:
 ```
 {environment name}|{domain suffix}|{optional tab prefix}
 ```
+
+## Browsers support
+
+The extension is built with Kango framework, so it should work with Crome, Firefox and Safari. However, I only tested latest changes in Chrome, so I can't guarantee that it still works in other browsers.
