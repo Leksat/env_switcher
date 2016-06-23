@@ -6,7 +6,7 @@ Source code: https://github.com/Leksat/env_switcher
 
 ## How it works
 
-If your development environments are based on the domain suffixes, this extension will help you to quick-switch environmets preserving the URL path. It also can prefix browser tabs to distinguish environments.
+If your development environments are based on the domain suffixes, this extension will help you to quick-switch environments preserving the URL path. It also can prefix browser tabs to distinguish environments.
 
 Example. You are working on example.com website.
 
@@ -31,4 +31,4 @@ The format of a configuration line:
 
 ## Browsers support
 
-The extension is built with Kango framework, so it should work with Crome, Firefox and Safari. However, I only tested latest changes in Chrome, so I can't guarantee that it still works in other browsers.
+The extension is built with the Kango framework (http://kangoextensions.com), so it should work with Crome, Firefox and Safari. However, I only tested latest changes in Chrome, so I can't guarantee that it still works in other browsers.
