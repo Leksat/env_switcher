@@ -4,6 +4,8 @@ A browser extension for website developers allowing for quick-switch website dom
 
 Source code: https://github.com/Leksat/env_switcher
 
+Available in Chrome Web Store: https://chrome.google.com/webstore/detail/ohefkhfmjkmcghiaoneinbjkoakfgoai
+
 ## How it works
 
 If your development environments are based on the domain suffixes, this extension will help you to quick-switch environments preserving the URL path. It also can prefix browser tabs to distinguish environments.
